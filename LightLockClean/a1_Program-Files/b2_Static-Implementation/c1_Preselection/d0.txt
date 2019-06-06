@@ -1,8 +1,0 @@
-Preselection File Listing
-
-01: All Preselection Code
-02: Robot Position Class
-03: Field Information Class
-04: Light Class
-05: Field Light Information fil e
-06: Captures Data for Field Light Information

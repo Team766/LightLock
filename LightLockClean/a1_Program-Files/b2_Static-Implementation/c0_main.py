@@ -1,22 +1,29 @@
-#Import Libraries
+#All Required Imports of external libraries
 import numpy as np
 import cv2
 import math
 
-#Import Classes
-from c1_Preselection.d2 import robotPosition #Allows for Robot Object
-from c1_Preselection.d3 import fieldInformation #Allows for Field Object
-#import c1_Preselection.d5 #Takes in field data file
+
+#Import Data Classes Preselection
+import c1_Preselection.d2_RobotPosition as c1d2
+import c1_Preselection.d3_FieldInformation as c1d3
+import c1_Preselection.d4_Light as c1d4
+#Import Homebrew Classes AQUIRE_DATA
+
 
 
 
 #Import Seperate Functions
+import c1_Preselection.d6_robotStartingPoint as c1d6
+
+#Create Robot and Field Implementations
+robot = robotPosition(0,0,0)
+field = fieldInformation(50)
 
 
-#Tunable Parameters
-
-
-#Specify Image File as variable
+#Designate Starting Parameters
+work_file = "" #Add file to test path in here
+start_pos = "rl" #Chose Starting Position (rr,rc,rl,br,bc,bl)
 
 #Architecture Step 1:Gather Data
 
