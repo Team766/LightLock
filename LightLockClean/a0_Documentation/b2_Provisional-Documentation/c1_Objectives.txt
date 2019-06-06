@@ -1,0 +1,13 @@
+Objectives
+
+To Design and Build a system capiable of locating a robot on a standard playing field to within 10 cm, repeatible no less then 5 times a second, with minimal setup or room for error, and no processor time
+
+Top Level Methodology Methodology: Localize of ceiling lights in competition venue (see "01, Top Level Design Reasoning", Section 01)
+
+Allowable Hardware Requirements (See "01, Top Level Design Reasoning", Section 02, a-e)
+    Fisheye Camera
+    Coprocessor
+    Gyroscope
+    Acceleromiter
+    Mounting Hardware
+

@@ -1,0 +1,7 @@
+Top Level Architecture
+
+1. Aquire Data
+2. Pre-Process Data
+3. Extract Information from Data
+4. Determine Location from Information
+5. Send Location to relevant system

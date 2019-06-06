@@ -1,0 +1,73 @@
+Top Level Design Reasoning
+    For explaining why architecure, hardware, and methodology decisions were made, and to audit those decisions
+
+Section 01:
+    Methodology
+        Possible Localization Solutions
+            Inertial
+                MEMS vs. Non-MEMS sensors
+                    MEMS
+                        Prone to Drift due to noise and double-integration
+                        Low Power
+                        Cheap
+                        Catastrophic drift over short time
+                    Non-MEMS
+                        Expensive
+                        Heavy
+                        Power-Intensive
+                        Accurate Enough
+            Signals
+                GPS
+                    Cannot Penetrate Buildings, no readout
+                WIFI
+                    Requires expensive and intensive design, build test
+                    Expensive components
+                    May be inaccurate, to ~1 meter
+                    Difficult to Design
+                Other
+                    Not allowed under current usual ruleset
+            Lighting
+                Relatively Cheap
+                    See This Document, "Section 2"
+                Thorough knowledge base
+                    Computer Vision is very well studied
+                Authorities available
+                    Via Zoox
+                Probably accurate to required levels
+                Probably fast
+                    If not, changing processor hardware can fix this
+                Maintainable
+                    Other people could work on this after CB leaves
+        Optimal Solution: Lighting
+        
+Section 02:
+    Hardware
+        Camera
+            Fisheye vs. Flat
+                Fisheye:
+                    Can see entire possible area of interest
+                    Requires more complex vision operations
+                    More Expensive
+                    Calibration may be a necessity for the lens
+                Flat:
+                    Cannot see entire area of interest >> Fatal
+        Processor
+            Single Board Computer
+                Cheap
+                Available
+                Abundant IO Solutions
+                Well-Documented
+                Linux-Based
+                Low but non-negligable power use
+                Expense and KISS violation
+            Main Processor
+                Slow
+                Possible Hangs in critical robot code >> Fatal
+        Mounting
+            High:
+            Low on superstructure:
+                High Probability obstructions >> Fatal
+        Gyroscope
+            Without an accurate gyroscope, orientation deterimination will be infeasible
+        Acceleromiter Input
+            For Kalman Filter, non-necessary but high-level force multiplier
