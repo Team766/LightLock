@@ -8,7 +8,7 @@ import sys
 #Import Data Classes Preselection
 import c1_Preselection.d2_RobotPosition as c1d2
 #import c1_Preselection.d3_FieldInformation as c1d3
-import c1_Preselection.d4_Light as c1d4
+#import c1_Preselection.d4_Light as c1d4
 #Import Homebrew Classes AQUIRE_DATA
 
 
@@ -17,6 +17,7 @@ import c1_Preselection.d4_Light as c1d4
 #Import Seperate Functions
 import c1_Preselection.d6_robotStartingPoint as c1d6
 import c2_AquireData.d1 as c2d1
+import c2_AquireData.d3_spaceSelection as c2d3
 
 #Create Robot and Field Implementations
 robot = c1d2.RobotPosition(0,0,0)
@@ -26,6 +27,7 @@ robot = c1d2.RobotPosition(0,0,0)
 #Designate Starting Parameters
 work_file = "C:/Users/team766/Python Projects/LightLock/0_/0_2_/1024px-3-2-circular.png" #Add file to test path in here
 start_pos = "rl" #Chose Starting Position (rr,rc,rl,br,bc,bl)
+height_of_ceiling = 50
 
 #Architecture Step 1:Gather Data
 c1d6.RobotStartingPoint(start_pos,robot)
@@ -37,8 +39,23 @@ elif c2d1.testFileExist(work_file) != 1:
 else:
     working_img = cv2.imread(work_file,0) #This implies I should check for a propper image file.
 
+cv2.imshow("asdf",working_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
+a,b,c,d = c2d3.convertCornerAngles(*c2d3.pixelRange(height_of_ceiling,robot.x_pos,robot.y_pos))
+
+a = int(a)
+b = int(b)
+c = int(c)
+d = int(d)
+
+working_img = c2d3.trimInput(working_img,robot.heading,a,b,c,d)
+
+cv2.imshow("",working_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 #Architecture Step 2: Preprocess Data

@@ -1,5 +1,3 @@
-import d2_RobotPosition
-
 def RobotStartingPoint(TWO_CHAR_ID,ClassName):
     if TWO_CHAR_ID == "br":
         ClassName.updatePosition(1,1,1)
