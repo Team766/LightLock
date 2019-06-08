@@ -10,7 +10,7 @@ Static Architecture Specific
     1. Determine what image file should be used
         1. Name >> 01;/02!/01^/01, Determine File.py >> Done
         2. Location >> 01;/02!/01^/01, Determine File.py >> Done
-    2. Determine that image file exists >> 01;/02!/01^/01, Determine File.py >> Nonfunctional
+    2. Determine that image file exists >> Done
     3. Import image file >> 01;/02!/01^/01, Determine File.py >> Done
         1. As Grayscale, from beginning >> Done
     4. Take last known location >> Pull Directly from 

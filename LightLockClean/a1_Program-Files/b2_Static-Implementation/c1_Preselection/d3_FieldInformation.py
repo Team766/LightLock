@@ -1,4 +1,5 @@
-class fieldInformation:
+class FieldInformation:
+    
     def __init__(self, lightHeight):
         self.blueRefCorner = (27.0,-13.5)
         self.blueStandCorner = (27.0,13.5)

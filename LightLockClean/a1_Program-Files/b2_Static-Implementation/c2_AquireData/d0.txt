@@ -1,0 +1,5 @@
+'Aquire Data' File Listing
+
+01: Check Existance of Designated File
+02: Load Designated File as Grayscale
+03: Aquire Last Known Position
