@@ -23,3 +23,6 @@ class RobotPosition:
     
     def returnPosition(self):
         return (self.x_pos,self.y_pos,self.heading)
+    
+    def returnCoordinates(self):
+        return(self.x_pos,self.y_pos)
