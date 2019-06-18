@@ -1,0 +1,14 @@
+So, math_code works like this.
+
+Each light has an absolute position. (0,0) is in the center of the field, with
+a standard cartesian position system from there. Angles are from 0 to 360, 
+starting on the x-axis and going clockwise.
+
+To test the code, pick a position for the robot. Figure out the angles to any
+two lights, relative to the robot heading (so if the robot is at 0,0 light is at 1,1
+robot heading = 315 then the light at -1,1 is at 90). This is all done according
+to the camera view, but you might have to do some trig to test arbitrary points.
+
+I know these work, but play around. It isn't final, but it shows that the math works,
+if you can ID the lights. Discord me for help, and someone delete this when you 
+are done, I need to improve it for use in the main loop.
