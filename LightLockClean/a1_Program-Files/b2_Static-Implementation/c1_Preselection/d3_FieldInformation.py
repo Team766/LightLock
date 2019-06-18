@@ -1,5 +1,3 @@
-import math
-
 class FieldInformation:
     
     def __init__(self, lightHeight):
