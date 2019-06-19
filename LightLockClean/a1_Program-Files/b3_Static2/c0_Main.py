@@ -13,6 +13,7 @@ import cv2
 #Image
     #Checks Existance of File - b4c1d1
 from c1_Image.d1_checkFileExistance import checkFileExists
+from c3_Extract.d1_triangulateRobot import triangulateRobotPosition
     #Imports Image as Grayscale
 #None
     #Determines size of Image
@@ -24,8 +25,6 @@ from c1_Image.d1_checkFileExistance import checkFileExists
     #Identify Each Light
     #Find Center of Light
     #Output Heading and ID of each light to /Extract
-
-
 
 
 #Extract
@@ -54,7 +53,8 @@ length_of_working_image,width_of_working_image = working_image.shape
 
 
 
-
+#Test Shit Here
+print(triangulateRobotPosition((-1,1),(-1,-1),0,225,135))
 
 
 
