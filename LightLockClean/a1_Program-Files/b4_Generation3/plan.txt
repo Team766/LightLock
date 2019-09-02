@@ -1,0 +1,40 @@
+Take Image
+Isolate each light
+Determine center point of each isolated light
+Find distance to each center point
+Apply circle intersection to each distance and point coordinates
+    P_0: (x0,y0), r0
+    P_1: (x1,y1), r1
+    
+    d = np.sqrt((x1-x0)**2 +(y1-y0)**2)
+    a = (r0**2 - r1**2 + d**2)/(2d)
+    h = np.sqrt(r0**2 - a**2)
+    x2 = x0 + a(x1-x0)/d
+    y21 = y0 + a(y1-y0)/d
+    y22 = y0 - a(y1-y0)/d
+    
+Determine Current Coordinate
+Output Information
+
+Stylistic Notes
+    Function outputs should be as tuples unless refering to pixel, in which case
+    numpy arrays should be used.
+        Example: Robot Position should be tuple
+                 Light Position should be tuple
+                 Center Pixel of light should be np.array
+    Pixels should be worked with in "converted format", and only back-converted when directly accessing images
+        Note: See s1.b for functions
+        Note: Pixel location in image is "base", recentered is "revised"
+    Frames of reference
+        Field is measured with y axis in starting direction of robot from red, with x 90 degrees clockwise
+        from that. Robot Angle is measured with y towards front of robot, x 90 degrees clockwise.
+        Heading is the differental between each y axis.
+        
+        Field in meters, robot in pixels (robot is the camera)
+        
+        
+Tunable Information:
+    s2.b: number of border pixels to add
+    s2.a: focal length of camera, for performance
+    
+    
